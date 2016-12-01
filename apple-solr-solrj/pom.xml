@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.appleframework.solr</groupId>
 		<artifactId>apple-solr</artifactId>
-		<version>0.0.4.RELEASE</version>
+		<version>0.0.5.RELEASE</version>
 	</parent>
 	<artifactId>apple-solr-solrj</artifactId>
 	<name>apple-solr-solrj</name>
