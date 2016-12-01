@@ -35,17 +35,17 @@ import org.apache.solr.util.DateMathParser;
 
 public final class DateFormatUtil {
 
-	public static final TimeZone GMT = TimeZone.getTimeZone("Asia/Shanghai");
+	public static final TimeZone CCT = TimeZone.getTimeZone("Asia/Shanghai");
 	/**
-	 * Fixed TimeZone (UTC) needed for parsing/formatting Dates in the canonical
+	 * Fixed TimeZone (CCT) needed for parsing/formatting Dates in the canonical
 	 * representation.
 	 */
-	public static final TimeZone CANONICAL_TZ = GMT;
+	public static final TimeZone CANONICAL_TZ = CCT;
 	/**
 	 * Fixed Locale needed for parsing/formatting Milliseconds in the canonical
 	 * representation.
 	 */
-	public static final Locale CANONICAL_LOCALE = Locale.ROOT;
+	public static final Locale CANONICAL_LOCALE = Locale.CHINA;
 	public static final String NOW = "NOW";
 	public static final char Z = 'Z';
 	/**

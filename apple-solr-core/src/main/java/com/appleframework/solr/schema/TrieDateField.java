@@ -17,6 +17,7 @@
 package com.appleframework.solr.schema;
 
 import java.text.ParseException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -181,10 +182,15 @@ public class TrieDateField extends TrieField implements DateValueFieldType {
 	}
 
 	// END: backwards
+	
+    private Calendar calendar = Calendar.getInstance();  
 
 	@Override
 	public Date toObject(IndexableField f) {
-		return (Date) super.toObject(f);
+		Date date = (Date) super.toObject(f);
+	    calendar.setTime(date);
+	    calendar.add(Calendar.HOUR, 8);
+		return calendar.getTime();
 	}
 
 	@Override
